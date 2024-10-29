@@ -5,7 +5,7 @@ import './CartWidget.css';
 import { Link } from 'react-router-dom';
 
 const CartWidget = () => {
-    const { cartItems } = useContext(CartContext);  // Obtener los productos del carrito desde el contexto
+    const { cartItems } = useContext(CartContext);  // Obtiene los productos del carrito desde el contexto
     const [isDropdownVisible, setIsDropdownVisible] = useState(false);
 
     // Función para manejar el hover

@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-/* General Layout */
 .home-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -25,16 +24,23 @@
     margin-bottom: 50px;
     border-radius: 12px;
     overflow: hidden;
+    height: 400px; /* Ajustar según el tamaño del banner */
 }
 
 .hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     filter: brightness(0.8);
+    z-index: 0; /* Coloca la imagen detrás del contenido */
 }
 
 .hero-content {
-    position: absolute;
+    position: relative;
+    z-index: 2;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -53,15 +59,19 @@
     margin-bottom: 20px;
 }
 
-.btn-primary {
-    background-color: #e74c3c;
-    color: white;
+/* Botones */
+.btn-primary, .btn-secondary {
     padding: 12px 30px;
     border: none;
     border-radius: 50px;
     cursor: pointer;
     font-size: 1.3rem;
     transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #e74c3c;
+    color: white;
 }
 
 .btn-primary:hover {
@@ -71,15 +81,16 @@
 .btn-secondary {
     background-color: #3498db;
     color: white;
-    padding: 12px 30px;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
 .btn-secondary:hover {
     background-color: #2980b9;
+}
+
+/* Menú Hamburguesa */
+.navbar-menu {
+    position: relative;
+    z-index: 3; /* Asegura que esté delante de la hero image */
 }
 
 /* Grid Layout */
@@ -159,7 +170,7 @@
     background-color: #e74c3c;
 }
 
-/* redes sociales  */
+/* Redes Sociales */
 .social-icons {
     display: flex;
     justify-content: center;

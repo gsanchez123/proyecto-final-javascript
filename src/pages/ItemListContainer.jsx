@@ -13,22 +13,23 @@ const ItemListContainer = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
+        // Datos de productos
         const fetchedItems = [
-            { id: 1, name: 'Remera Hombre', price: 20, category: 'deportes', stock: 10, image: '../images/remerahombre.jpg' },
-            { id: 2, name: 'Remera Mujer', price: 40, category: 'urbana', stock: 5, image: '../images/remeramujer.jpg' },
-            { id: 3, name: 'Camisetas Unisex', price: 55, category: 'urbana', stock: 15, image: '../images/camisetasunisex.jpg' },
-            { id: 4, name: 'Zapatillas Urbanas Mujer', price: 60, category: 'urbana', stock: 18, image: '../images/urbanasmujer.jpg' },
-            { id: 5, name: 'Zapatillas Urbanas Hombre', price: 100, category: 'urbana', stock: 14, image: '../images/urbanashombre.jpg' },
-            { id: 6, name: 'Zapatillas Urbanas ', price: 100, category: 'urbana', stock: 10, image: '../images/zapatillasurbanas.jpg' },
-            { id: 7, name: 'Buzo Hoodie Hombre', price: 45, category: 'urbana', stock: 15, image: '../images/sudaderahombre.jpg' },
-            { id: 8, name: 'Buzo Oversize', price: 46, category: 'urbana', stock: 10, image: '../images/buzooversize.jpg' },
-            { id: 9, name: 'Buzo Oversize Mujer', price: 50, category: 'urbana', stock: 16, image: '../images/sudaderamujer.jpg' },
+            { id: 1, name: 'Remera Hombre', price: 20, category: 'deportes', stock: 10, image: 'remerahombre.jpg' },
+            { id: 2, name: 'Remera Mujer', price: 40, category: 'urbana', stock: 5, image: 'remeramujer.jpg' },
+            { id: 3, name: 'Camisetas Unisex', price: 55, category: 'urbana', stock: 15, image: 'camisetasunisex.jpg' },
+            { id: 4, name: 'Zapatillas Urbanas Mujer', price: 60, category: 'urbana', stock: 18, image: 'urbanasmujer.jpg' },
+            { id: 5, name: 'Zapatillas Urbanas Hombre', price: 100, category: 'urbana', stock: 14, image: 'urbanashombre.jpg' },
+            { id: 6, name: 'Zapatillas Urbanas', price: 100, category: 'urbana', stock: 10, image: 'zapatillasurbanas.jpg' },
+            { id: 7, name: 'Buzo Hoodie Hombre', price: 45, category: 'urbana', stock: 15, image: 'sudaderahombre.jpg' },
+            { id: 8, name: 'Buzo Oversize', price: 46, category: 'urbana', stock: 10, image: 'buzooversize.jpg' },
+            { id: 9, name: 'Buzo Oversize Mujer', price: 50, category: 'urbana', stock: 16, image: 'sudaderamujer.jpg' },
         ];
 
-        const filtered = id
-            ? fetchedItems.filter(item => item.category === id)
-            : fetchedItems;
+        // Filtrar los productos por categoría si existe
+        const filtered = id ? fetchedItems.filter(item => item.category === id) : fetchedItems;
 
+        // Establecer los productos filtrados y todos los productos
         setItems(filtered);
         setFilteredItems(filtered);
     }, [id]);

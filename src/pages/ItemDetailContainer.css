@@ -1,26 +1,62 @@
-.item-detail-container {
-    padding: 20px;
+/* Estilo del contenedor principal del detalle del producto */
+.detail-container {
+    max-width: 800px; /* Limitar el ancho máximo */
+    margin: 20px auto; /* Centrar el contenedor */
+    padding: 20px; /* Espaciado interno */
+    border: 1px solid #ddd; /* Borde suave */
+    border-radius: 8px; /* Esquinas redondeadas */
+    background-color: #fff; /* Fondo blanco */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para profundidad */
+}
+
+/* Estilo de la imagen del producto */
+.detail-container img {
+    width: 100%; /* Imagen ocupa todo el ancho del contenedor */
+    border-radius: 5px; /* Esquinas redondeadas */
+    margin-bottom: 20px; /* Espacio debajo de la imagen */
+}
+
+/* Estilo del nombre del producto */
+.detail-container h1 {
+    font-size: 2rem; /* Tamaño de fuente grande */
+    color: #333; /* Color del texto */
+    margin-bottom: 10px; /* Espacio debajo del título */
+}
+
+/* Estilo de la descripción del producto */
+.detail-container p.description {
+    font-size: 1.2rem; /* Tamaño de fuente de descripción */
+    color: #555; /* Color más suave */
+    margin-bottom: 20px; /* Espacio debajo de la descripción */
+}
+
+/* Estilo de los tamaños y colores */
+.size-color-selector {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    margin-bottom: 20px; /* Espacio debajo del selector */
 }
 
-.item-detail {
-    max-width: 600px;
-    text-align: center;
+/* Estilo para cada opción de tamaño */
+.size-option, .color-option {
+    margin: 5px 0; /* Espacio entre opciones */
 }
 
-.item-detail img {
-    width: 100%;
-    border-radius: 5px;
+/* Estilo del botón de agregar al carrito */
+.add-to-cart-btn {
+    padding: 10px 20px; /* Espaciado del botón */
+    background-color: #28a745; /* Color verde */
+    color: white; /* Texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Esquinas redondeadas */
+    font-size: 1.2rem; /* Tamaño de fuente */
+    cursor: pointer; /* Cambia el cursor al pasar */
+    transition: background-color 0.3s ease; /* Transición suave */
 }
 
-.item-price {
-    font-size: 1.5rem;
-    color: #007bff;
+/* Efecto al pasar el mouse sobre el botón */
+.add-to-cart-btn:hover {
+    background-color: #218838; /* Color más oscuro al pasar */
 }
 
-.btn-add-to-cart {
-    margin-top: 20px;
-}
 

@@ -1,24 +1,76 @@
+/* Estilo general del contenedor de detalles del producto */
 .detail-container {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    max-width: 500px; /* Limitar el ancho del contenedor */
-    margin: auto; /* Centrar el contenedor */
+    max-width: 600px; /* Ancho máximo del contenedor */
+    margin: 20px auto; /* Centrado en la página */
+    padding: 20px; /* Espaciado interno */
+    border: 1px solid #ddd; /* Borde suave */
+    border-radius: 8px; /* Esquinas redondeadas */
+    background-color: #fff; /* Fondo blanco */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para profundidad */
 }
 
+/* Estilo del título del producto */
+.detail-container h2 {
+    font-size: 2rem; /* Tamaño grande para el título */
+    color: #333; /* Color del texto */
+    margin-bottom: 15px; /* Espacio debajo del título */
+}
+
+/* Estilo de la descripción del producto */
+.detail-container p {
+    margin: 5px 0; /* Espacio entre párrafos */
+    color: #555; /* Color de texto más suave */
+}
+
+/* Estilo del precio */
 .price {
-    font-size: 1.5rem;
-    color: #28a745; /* Color verde */
-    font-weight: bold;
+    font-size: 1.5rem; /* Tamaño de fuente del precio */
+    color: #28a745; /* Color verde para el precio */
+    font-weight: bold; /* Negrita para resaltar */
 }
 
+/* Estilo del stock disponible */
+.stock {
+    color: #dc3545; /* Color rojo para advertir stock bajo */
+    margin-bottom: 20px; /* Espacio debajo del stock */
+}
+
+/* Estilo de las selecciones de tamaño y color */
 .size-selection,
 .color-selection {
-    margin-bottom: 15px; /* Separa secciones */
+    margin-bottom: 15px; /* Espacio entre secciones */
 }
 
+/* Estilo para las etiquetas de selección */
 label {
-    font-weight: bold; /* Hacer las etiquetas más destacadas */
+    display: block; /* Mostrar etiquetas en bloque */
+    margin-bottom: 5px; /* Espacio debajo de la etiqueta */
+    font-weight: bold; /* Negrita para resaltar */
+}
+
+/* Estilo para los selectores */
+select {
+    width: 100%; /* Selector ocupa todo el ancho */
+    padding: 10px; /* Espaciado interno del selector */
+    border: 1px solid #ccc; /* Borde gris */
+    border-radius: 5px; /* Esquinas redondeadas */
+    font-size: 1rem; /* Tamaño de fuente */
+    margin-top: 5px; /* Espacio encima del selector */
+}
+
+/* Estilo del botón de agregar al carrito */
+.btn {
+    padding: 10px 20px; /* Espaciado del botón */
+    background-color: #007bff; /* Color azul */
+    color: white; /* Texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Esquinas redondeadas */
+    font-size: 1.2rem; /* Tamaño de fuente */
+    cursor: pointer; /* Cambiar el cursor al pasar */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+/* Efecto al pasar el mouse sobre el botón */
+.btn:hover {
+    background-color: #0056b3; /* Color más oscuro al pasar */
 }

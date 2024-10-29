@@ -5,7 +5,7 @@ import CartWidget from './CartWidget'; // Usa el CartWidget para mostrar el íco
 import { useCart } from '../context/CartContext'; // Usa el hook  para el contexto del carrito
 
 const Navbar = () => {
-    const { getTotalItems } = useCart(); // Obtener el total de productos del carrito
+    const { getTotalItems } = useCart(); // Obtiene el total de productos del carrito
 
     const categories = [
         { id: 'urban', name: 'Ropa Urbana' },
@@ -29,7 +29,7 @@ const Navbar = () => {
                         ))}
                     </ul>
 
-                    {/* Aquí se incluye el widget del carrito */}
+                    {/* aca se incluye el widget del carrito */}
                     <ul className="navbar-nav">
                         <li className="nav-item">
                             <CartWidget cartItemCount={getTotalItems()} />

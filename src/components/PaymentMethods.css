@@ -1,0 +1,71 @@
+/* PaymentMethods.css */
+
+.payment-methods-container {
+    max-width: 600px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centrar horizontalmente */
+    padding: 20px; /* Espaciado interno */
+    border: 1px solid #ddd; /* Borde sutil */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    background-color: #fff; /* Fondo blanco */
+}
+
+h3 {
+    text-align: center; /* Centrar el título */
+    color: #333; /* Color del texto del título */
+}
+
+.error-message {
+    color: red; /* Color para mensajes de error */
+    text-align: center; /* Centrar mensajes de error */
+    margin-bottom: 15px; /* Espaciado inferior */
+}
+
+.success-message {
+    color: green; /* Color para mensajes de éxito */
+    text-align: center; /* Centrar mensajes de éxito */
+    margin-bottom: 15px; /* Espaciado inferior */
+}
+
+.purchase-form {
+    display: flex; /* Usar flexbox para el formulario */
+    flex-direction: column; /* Organizar los elementos en columna */
+}
+
+.purchase-form div {
+    margin-bottom: 15px; /* Espaciado entre los campos */
+}
+
+label {
+    font-weight: bold; /* Negrita para etiquetas */
+    margin-bottom: 5px; /* Espaciado inferior de etiquetas */
+}
+
+input, select {
+    width: 100%; /* Ancho completo para inputs y selects */
+    padding: 10px; /* Espaciado interno */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 4px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de fuente */
+}
+
+input:focus, select:focus {
+    border-color: #007bff; /* Color de borde al enfocar */
+    outline: none; /* Eliminar contorno por defecto */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Sombra al enfocar */
+}
+
+button {
+    background-color: #007bff; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    padding: 10px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Bordes redondeados */
+    cursor: pointer; /* Cambiar cursor al pasar sobre el botón */
+    font-size: 16px; /* Tamaño de fuente */
+    transition: background-color 0.3s ease; /* Transición suave para el hover */
+}
+
+button:hover {
+    background-color: #0056b3; /* Color al pasar el mouse por encima */
+}

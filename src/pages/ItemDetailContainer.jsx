@@ -1,11 +1,14 @@
+// src/components/ItemDetailContainer.jsx
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import ItemDetail from './ItemDetail';  // NO olvidar de tener este componente implementado
+import ItemDetail from './ItemDetail';  // no olvidar de que este componente esté implementado
 import './ItemDetailContainer.css';     // Importa el archivo de CSS
 
 const ItemDetailContainer = () => {
     const { id } = useParams();  // Obtener ID del producto desde la URL
     const [item, setItem] = useState(null);
+    const [selectedSize, setSelectedSize] = useState(''); // Estado para el tamaño seleccionado
+    const [selectedColor, setSelectedColor] = useState(''); // Estado para el color seleccionado
 
     useEffect(() => {
         // Simula la obtención de detalles de producto
@@ -22,17 +25,29 @@ const ItemDetailContainer = () => {
     }, [id]);
 
     // Define la función onAddToCart
-    const onAddToCart = (item, size, color) => {
-        console.log(`Producto agregado al carrito: ${item.name}, Talle: ${size}, Color: ${color}`);
-        // Lógica para agregar el producto al carrito
+    const onAddToCart = () => {
+        if (selectedSize && selectedColor) {
+            console.log(`Producto agregado al carrito: ${item.name}, Talle: ${selectedSize}, Color: ${selectedColor}`);
+            // Lógica para agregar el producto al carrito (se podria usar el contexto del carrito)
+            // Por ejemplo: addToCart({ ...item, size: selectedSize, color: selectedColor });
+        } else {
+            alert('Por favor selecciona un tamaño y un color.');
+        }
     };
 
     return ( 
         <div className="detail-container">
             {item ? (
-                <ItemDetail item={item} onAddToCart={onAddToCart} />  /*función onAddToCart */
+                <ItemDetail 
+                    item={item} 
+                    onAddToCart={onAddToCart} 
+                    selectedSize={selectedSize} 
+                    setSelectedSize={setSelectedSize} 
+                    selectedColor={selectedColor} 
+                    setSelectedColor={setSelectedColor} 
+                />  /* Envía los estados y funciones como props */
             ) : (
-                <p>Product not found.</p>
+                <p>Producto no encontrado.</p>
             )}
         </div>
     );

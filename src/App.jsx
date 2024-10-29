@@ -1,5 +1,7 @@
 
-// src/App.jsx
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics"; // Si necesitas Analytics
 import React from 'react'; 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './pages/Header';
@@ -12,6 +14,21 @@ import ItemDetailContainer from './pages/ItemDetailContainer';
 import Cart from './components/Cart'; // Componente del carrito
 import { CartProvider } from './context/CartContext'; // Proveedor del contexto del carrito
 import 'bootstrap/dist/css/bootstrap.min.css';
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyA5Qb0mP3h1phq9keoGKjc-VbXOKspKzuI",
+  authDomain: "sales-center-89bf4.firebaseapp.com",
+  projectId: "sales-center-89bf4",
+  storageBucket: "sales-center-89bf4.appspot.com",
+  messagingSenderId: "41209538656",
+  appId: "1:41209538656:web:3b1a4b33b931240388bb05",
+  measurementId: "G-HT32V1Z0VJ"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app); // Opcional si usas Analytics
 
 const App = () => {
   return (

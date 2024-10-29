@@ -1,0 +1,67 @@
+/* src/components/Checkout.css */
+
+.checkout-container {
+    max-width: 500px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor */
+    padding: 20px; /* Espaciado interno */
+    background-color: #f9f9f9; /* Fondo claro */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+.checkout-container h2 {
+    font-size: 1.8rem; /* Tamaño del título */
+    color: #333; /* Color del título */
+    text-align: center; /* Centra el título */
+    margin-bottom: 20px; /* Espaciado inferior */
+}
+
+.checkout-container form div {
+    margin-bottom: 15px; /* Espaciado entre campos */
+}
+
+.checkout-container label {
+    display: block; /* Bloque completo */
+    font-weight: bold; /* Negrita para el texto */
+    margin-bottom: 5px; /* Espaciado inferior */
+    color: #555; /* Color de texto */
+}
+
+.checkout-container input[type="text"],
+.checkout-container input[type="email"],
+.checkout-container input[type="tel"] {
+    width: 100%; /* Ancho completo */
+    padding: 10px; /* Espaciado interno */
+    border: 1px solid #ccc; /* Borde */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 1rem; /* Tamaño de fuente */
+    color: #333; /* Color de texto */
+    outline: none; /* Sin borde al seleccionar */
+    transition: border-color 0.3s ease; /* Transición de borde */
+}
+
+.checkout-container input[type="text"]:focus,
+.checkout-container input[type="email"]:focus,
+.checkout-container input[type="tel"]:focus {
+    border-color: #007bff; /* Color del borde en foco */
+}
+
+.btn {
+    width: 100%; /* Ancho completo */
+    padding: 12px; /* Espaciado interno */
+    background-color: #007bff; /* Fondo del botón */
+    color: #fff; /* Color de texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 1rem; /* Tamaño de fuente */
+    cursor: pointer; /* Cursor de puntero */
+    transition: background-color 0.3s ease; /* Transición de color de fondo */
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Color de fondo al pasar el ratón */
+}
+
+.mt-3 {
+    margin-top: 20px; /* Margen superior */
+}
